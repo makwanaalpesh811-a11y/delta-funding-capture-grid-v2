@@ -39,6 +39,18 @@ position = min(base_position, 0.7 * equity) * 20   (20x leverage)
 ### 4. Entry/Exit
 - Entry = (T−1 min) OPEN, Exit = (T+1 min) OPEN, fee 0.05%
 
+## 🤖 Bot Logic (delta_bot.py)
+
+Complete rules in `bot_logic_spec.md` + `delta_bot.py` (951 lines, pure stdlib):
+- **Account levels L0-L4** → leverage/coins-per-chunk/concurrency
+- **20x baseline, 70% margin** (30x opt-in)
+- **Chunks C1-C6 all active** — no skip
+- **Sizing:** `base=clamp(0.5%·turnover, 5, 2000)` → `margin=min(base, 0.7·equity)` → `notional=margin·leverage`
+- **Signal:** T−1min entry / T+1min exit, negative→LONG, positive→SHORT
+- **Risk:** 20% DD hard stop, 15% warning+half size, 1 trade/day/coin, daily loss stop
+- **$1 se bhi chalta hai** (DD -17.9%, +$111)
+- Commands: `--selftest --scan --paper-window --status --live`
+
 ## 📂 Files
 
 | File | Description |

@@ -1,0 +1,21 @@
+{
+  "daily_date": "2026-06-02",
+  "daily_start_equity": 240.11928366,
+  "equity": 240.01266911,
+  "halt_reason": "",
+  "halted": false,
+  "last_update": "2026-11-12T09:14:55Z",
+  "max_dd_pct": -0.044400661360867524,
+  "mode": "paper",
+  "peak_equity": 240.11928366,
+  "realized_pnl": 40.01266911,
+  "start_equity": 200.0,
+  "trade_count": 5,
+  "traded": {
+    "AIOTUSD|2026-05-29": "AIOTUSD-2026-05-29-1",
+    "AIOTUSD|2026-05-30": "AIOTUSD-2026-05-30-2",
+    "AIOTUSD|2026-05-31": "AIOTUSD-2026-05-31-3",
+    "AIOTUSD|2026-06-01": "AIOTUSD-2026-06-01-4",
+    "HIVEUSD|2026-06-02": "HIVEUSD-2026-06-02-5"
+  }
+}
