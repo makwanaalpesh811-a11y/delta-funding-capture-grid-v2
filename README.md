@@ -1,62 +1,53 @@
-# Delta Funding Capture — Balance-Scaled Grid v2 (20x)
+# Delta Funding Capture — Balance-Scaled Grid v2 (Best Setup 20x)
 
-**v2: Balance-scaled progressive grid — jese balance badhta hai, wese zyada coins/chunk add hote hain. 20x leverage, 70% margin.**
+**v2 BEST: Level-based setup — har balance level pe 20x leverage, sab chunks (C1-C6) available. C1 me trade available ho to bhi chalta hai.**
 
-## 📊 Result Summary (20x Locked)
+## 📊 Result Summary (20x, All Chunks — BEST)
 
 | Metric | Value |
 |--------|-------|
 | Exchange | Delta India (perpetual_futures) |
-| Grid | **Balance-scaled** (progressive tiers) |
+| Grid | Sab chunks (C1-C6) active |
 | Leverage | **20x (70% margin, compounding)** |
 | Coins | 66 (watchlist) |
-| Trades | 139 |
+| Trades | 162 |
 | Win rate | 75.9% |
-| **Net PnL** | **+$3,744.90** |
-| **Final equity** | **$3,944.90** (start $200) |
-| **Max drawdown** | **-16.22%** |
+| **Net PnL** | **+$4,014.43** |
+| **Final equity** | **$4,214.43** (start $200) |
+| **Max drawdown** | **-16.44%** |
 | Monthly positive | 6/7 (Sep -$78) |
 | P/L line cross | ❌ NO |
 
-## 🧠 Strategy Logic (Balance-Scaled)
+## 🧠 Strategy Logic (Best Setup)
 
-### 1. Balance Tiers — Progressive Grid
-Jese balance badhta hai, wese zyada coins/chunk add:
+### 1. Leverage (Level-Based)
+- **20x leverage, 70% margin, compounding** — sabse best (DD -16.4%)
+- $500+ balance → 30x (DD -19%, +$9,938)
+- Chhota balance ($1) → bhi 20x kaam karta (DD -17.9%)
 
-| Balance | Coins/Chunk | Chunks Active | Trades/Day |
-|---------|------------|---------------|-----------|
-| $1-50 | 1 | C6 | 1 |
-| $50-200 | 1 | C6, C5 | 1-2 |
-| $200-500 | 2 | C6,C5,C4,C3 | 2-4 |
-| $500-1000 | 3 | C6-C2 | 3-5 |
-| $1,000+ | 5 | C6-C1 (sab) | 5+ |
-
-**Rule:** Chhota balance → C6 focus (high funding, high profit/trade). Grow → expand chunks.
-
-### 2. Signal (Funding Capture)
+### 2. Chunks (C1-C6 ALL)
+- **Sab chunks available** — C1 me trade available ho to bhi chalta hai
+- Koi chunk skip nahi (162 trades, sab)
 - Funding NEGATIVE → LONG, POSITIVE → SHORT
-- Entry = (T−1 min) OPEN, Exit = (T+1 min) OPEN, fee 0.05%
 
-### 3. Position Sizing (20x, 70% margin)
+### 3. Position Sizing (20x)
 ```
 base_position = 0.5% of 24h turnover, clamped [5, 2000] USDT
 position = min(base_position, 0.7 * equity) * 20   (20x leverage)
 ```
 
-### 4. Leverage Safety
-- **20x → DD -16.2%** — 20% limit ke andar ✅
-- **25x → DD -20.4%** — 20% ke ~karib
-- **30x → DD -24.1%** — bahar (risky)
+### 4. Entry/Exit
+- Entry = (T−1 min) OPEN, Exit = (T+1 min) OPEN, fee 0.05%
 
 ## 📂 Files
 
 | File | Description |
 |------|-------------|
-| `DELTA_GRID_STRATEGY.md` | Base strategy documentation |
-| `delta_balance_grid_20x.json` | **20x equity curve + report** |
-| `delta_balance_grid.json` | Balance grid (1x) results |
-| `balance_grid_delta.py` | Balance grid backtest script |
-| `grid_delta_result.json` | Grid backtest results |
+| `delta_level_best_20x.json` | **20x all-chunks equity curve + report** |
+| `delta_progressive_grid.json` | Progressive leverage (20x→2x) |
+| `delta_stage_grid_*.json` | Stage grid ($1, $50, $200) |
+| `delta_balance_grid_20x.json` | Balance grid 20x |
+| `DELTA_GRID_STRATEGY.md` | Base strategy doc |
 | `s5_final_trades.csv` | 162 trades |
 | `s5_final_coins.csv` | 66 coins |
 | `delta_volume.json` | Volume data |
