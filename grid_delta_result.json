@@ -1,0 +1,82 @@
+{
+  "uniform": {
+    "1": {
+      "label": "N=1",
+      "trades": 41,
+      "net": 124.06,
+      "win": 65.9,
+      "dd": -14.63,
+      "cross": false,
+      "valid": true
+    },
+    "2": {
+      "label": "N=2",
+      "trades": 62,
+      "net": 246.07,
+      "win": 72.6,
+      "dd": -9.83,
+      "cross": false,
+      "valid": true
+    },
+    "3": {
+      "label": "N=3",
+      "trades": 78,
+      "net": 438.84,
+      "win": 75.6,
+      "dd": -5.58,
+      "cross": false,
+      "valid": true
+    },
+    "5": {
+      "label": "N=5",
+      "trades": 93,
+      "net": 431.35,
+      "win": 74.2,
+      "dd": -6.48,
+      "cross": false,
+      "valid": true
+    },
+    "10": {
+      "label": "N=10",
+      "trades": 124,
+      "net": 458.13,
+      "win": 75.0,
+      "dd": -6.4,
+      "cross": false,
+      "valid": true
+    },
+    "15": {
+      "label": "N=15",
+      "trades": 148,
+      "net": 459.15,
+      "win": 74.3,
+      "dd": -6.4,
+      "cross": false,
+      "valid": true
+    },
+    "20": {
+      "label": "N=20",
+      "trades": 162,
+      "net": 459.62,
+      "win": 75.9,
+      "dd": -6.4,
+      "cross": false,
+      "valid": true
+    }
+  },
+  "best_mixed": {
+    "label": "{'C1': 20, 'C2': 3, 'C3': 1, 'C4': 2, 'C5': 5, 'C6': 2}",
+    "trades": 123,
+    "net": 468.43,
+    "win": 77.2,
+    "dd": -6.4,
+    "cross": false,
+    "valid": true
+  },
+  "config": {
+    "liq_frac": 0.005,
+    "min_pos": 5.0,
+    "max_pos": 2000.0,
+    "base": 200.0
+  }
+}
